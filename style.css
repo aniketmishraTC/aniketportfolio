@@ -1026,17 +1026,74 @@ a.contact-value:hover {
 }
 
 @media (max-width: 480px) {
+    .nav-container {
+        justify-content: center;
+    }
+
     .nav-menu {
         display: none;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    .hero-text,
+    .about-text,
+    .section-header,
+    .timeline-content,
+    .project-card,
+    .skill-category,
+    .education-card,
+    .contact-item {
+        text-align: center;
+    }
+
+    .timeline::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+        padding-left: 0;
+        padding-top: var(--spacing-xl);
+    }
+
+    .timeline-dot {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -8px;
+    }
+
+    .timeline-header {
+        align-items: center;
+        text-align: center;
+    }
+
+    .timeline-meta {
+        align-items: center;
+    }
+
+    .timeline-description li {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .timeline-description li::before {
+        position: relative;
+        left: auto;
+        margin-right: var(--spacing-xs);
     }
 
     .hero-buttons {
         flex-direction: column;
         width: 100%;
+        align-items: center;
     }
 
     .btn {
         width: 100%;
+        max-width: 300px;
         text-align: center;
     }
 
@@ -1050,5 +1107,17 @@ a.contact-value:hover {
 
     .contact-info {
         grid-template-columns: 1fr;
+    }
+
+    .contact-item {
+        align-items: center;
+    }
+
+    .project-icon,
+    .education-icon,
+    .cert-icon,
+    .contact-icon {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
