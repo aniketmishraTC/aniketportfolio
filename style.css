@@ -1099,10 +1099,24 @@ a.contact-value:hover {
 
     .about-stats {
         grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+    .stat-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .skills-content {
         grid-template-columns: 1fr;
+    }
+
+    .skill-tags,
+    .project-tech {
+        justify-content: center;
     }
 
     .contact-info {
