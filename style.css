@@ -1021,25 +1021,29 @@ a.contact-value:hover {
     }
 
     .hero-right {
-        flex: 0 0 55%;
-        /* Give image slightly more space */
-        width: 55%;
+        flex: 0 0 auto;
+        width: 85%;
+        /* Takes almost full width to show full image */
         height: 100vh;
         position: absolute;
         right: 0;
         top: 0;
+        z-index: 0;
     }
 
     .hero-left {
-        flex: 0 0 45%;
-        /* Text takes less space */
-        width: 45%;
-        padding: 0 0.5rem 0 1rem;
+        flex: 0 0 auto;
+        width: 65%;
+        /* Overlaps the image */
+        height: 100vh;
+        padding: 0 1rem;
         justify-content: center;
         align-items: center;
         text-align: left !important;
+        position: relative;
         z-index: 2;
-        background: rgba(0, 0, 0, 0.6);
+        /* Seamless blend from text to image */
+        background: linear-gradient(to right, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0.8) 70%, transparent 100%);
     }
 
     /* Mobile-specific image adjustment */
